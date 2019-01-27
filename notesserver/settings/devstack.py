@@ -13,7 +13,7 @@ CLIENT_ID = 'edx_notes_api-key'
 CLIENT_SECRET = 'edx_notes_api-secret'
 
 ES_INDEXES = {'default': 'notes_index'}
-HAYSTACK_CONNECTIONS['default']['URL'] = 'http://eduxElasticsearch:9200/'
+HAYSTACK_CONNECTIONS['default']['URL'] = 'http://edux-elasticsearch:9200/'
 
 DATABASES = {
     'default': {
@@ -21,7 +21,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME', 'notes'),
         'USER': os.environ.get('DB_USER', 'notes001'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'password'),
-        'HOST': os.environ.get('DB_HOST', 'eduxMysql'),
+        'HOST': os.environ.get('DB_HOST', 'edux-mysql'),
         'PORT': os.environ.get('DB_PORT', 3306),
         'CONN_MAX_AGE': 60,
     }
